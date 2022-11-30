@@ -1,0 +1,102 @@
+/*---------- .header *****Block ----------*/
+
+.header {
+  @include media-breakpoint-up(md) {
+    padding: 15px;
+  }
+
+  @include media-breakpoint-up-xxxl {
+    padding: 15px 0 15px 15px;
+  }
+
+  /*---------- .header ****Elements ----------*/
+
+  &__top {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      @include display-flex(row, space-between);
+    }
+
+    @include media-breakpoint-up-xxxl {
+      display: none;
+    }
+  }
+
+  &__logo {
+    &>a {
+      display: inline-block;
+
+      &>img {
+        @include media-breakpoint-up(md) {
+          max-width: 250px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          max-width: 300px;
+        }
+      }
+    }
+
+    &--visible-xxxl {
+      display: none;
+
+      @include media-breakpoint-up-xxxl {
+        display: block;
+      }
+    }
+  }
+
+  &__main {
+    @include media-breakpoint-up-xxxl {
+      @include display-flex(row, space-between);
+    }
+  }
+
+  &__cta {
+    @include media-breakpoint-up(md) {
+      @include display-flex();
+    }
+
+    &-separator {
+      @include media-breakpoint-up(md) {
+        margin: 7.5px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin: 15px;
+      }
+    }
+
+    &--visible-xxxl {
+      display: none;
+
+      @include media-breakpoint-up-xxxl {
+        @include display-flex();
+      }
+    }
+  }
+
+  &__contact-phone {
+    @include media-breakpoint-up(md) {
+      @include display-flex();
+      font-size: 18px;
+      color: #4a4a4a;
+    }
+
+    &>img {
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    &>a {
+      color: #4a4a4a;
+    }
+  }
+}
+
+/* if header is white background include border-bottom on inner pages' header,
+  separator for inner pages' header and .content-wrapper */
+body:not(.home-page) .header {
+  border-bottom: 1px solid $primary;
+}
