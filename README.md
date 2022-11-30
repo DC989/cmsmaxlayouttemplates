@@ -17,7 +17,7 @@
 
 ---------------------------------------------------------------------------------
 
-<span style="color:red">xl -----≥ 1200px</span>
+<span style="color:red">xl -----≥ **1200px**</span>
 ![alt text](https://github.com/DC989/cmsmaxlayouttemplates/blob/header-regular-1/header-regular-1-xl.jpg?raw=true)
 
 ---------------------------------------------------------------------------------
