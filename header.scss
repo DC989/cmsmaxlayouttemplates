@@ -74,6 +74,13 @@
       @include media-breakpoint-up-xxxl {
         @include display-flex();
       }
+
+      &>a:last-child {
+        @include media-breakpoint-up-xxxl {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
     }
   }
 
