@@ -75,7 +75,7 @@
         @include display-flex();
       }
 
-      /* delete if buttons don't have radius */
+      /* DELETE if buttons don't have radius */
       &>a:last-child {
         @include media-breakpoint-up-xxxl {
           border-top-right-radius: 0;
@@ -104,7 +104,8 @@
 }
 
 /* if header is white background include border-bottom on inner pages' header,
-  separator for inner pages' header and .content-wrapper */
+  separator for inner pages' header and .content-wrapper
+  DELETE if header has a background */
 body:not(.home-page) .header {
   border-bottom: 1px solid $primary;
 }
