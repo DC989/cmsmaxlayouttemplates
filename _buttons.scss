@@ -1,0 +1,96 @@
+.btn {
+  border: 0;
+  border-radius: 0;
+  padding: 6px 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.btn-sm {
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.btn-lg {
+  padding: 10px 16px 9px;
+  font-size: 18px;
+}
+
+.btn-xl {
+  padding: 15px 20px;
+  font-size: 20px;
+}
+
+.btn-link {
+  color: $primary;
+}
+
+.btn-white-border {
+  border: 2px solid #fff;
+  background: transparent;
+  padding: 4px 10px;
+  color: #fff;
+
+  &--sm {
+    padding: 2px 6px;
+  }
+
+  &--lg {
+    border-width: 3px;
+    padding: 7px 13px 6px;
+  }
+
+  &--xl {
+    border-width: 3px;
+    padding: 12px 17px;
+  }
+}
+
+.btn-dark-border {
+  border: 2px solid #000;
+  background: transparent;
+  padding: 4px 10px;
+  color: #000;
+
+  &--sm {
+    padding: 2px 6px;
+  }
+
+  &--lg {
+    border-width: 3px;
+    padding: 7px 13px 6px;
+  }
+
+  &--xl {
+    border-width: 3px;
+    padding: 12px 17px;
+  }
+}
+
+.btn-primary-border {
+  border: 2px solid $primary;
+  background: transparent;
+  padding: 4px 10px;
+  color: $primary;
+
+  &--sm {
+    padding: 2px 6px;
+  }
+
+  &--lg {
+    border-width: 3px;
+    padding: 7px 13px 6px;
+  }
+
+  &--xl {
+    border-width: 3px;
+    padding: 12px 17px;
+  }
+}
