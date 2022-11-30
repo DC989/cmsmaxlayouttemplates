@@ -75,6 +75,7 @@
         @include display-flex();
       }
 
+      /* delete if buttons don't have radius */
       &>a:last-child {
         @include media-breakpoint-up-xxxl {
           border-top-right-radius: 0;
