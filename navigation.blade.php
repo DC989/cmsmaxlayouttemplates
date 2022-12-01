@@ -12,7 +12,7 @@
         </button>
     </div>
 
-    <div class="collapse navbar-collapse" id="navbar">
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbar">
         <ul class="nav navbar-nav"> @if ($layout->hasMenu('main-menu-header')) @include('partials.navs.nav',
             ['menu' => $layout->getMenu('main-menu-header'), 'showNavSeparatorBefore' =>
             isset($showNavSeparatorBefore) ? $showNavSeparatorBefore : false]) @endif </ul>
