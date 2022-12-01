@@ -21,7 +21,6 @@
 
   .navbar-collapse {
     background-color: $primary;
-    margin: 0 -12px;
 
     @include media-breakpoint-up(md) {
       background-color: transparent;
