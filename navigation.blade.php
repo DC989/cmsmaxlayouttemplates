@@ -15,7 +15,7 @@
         </div>
 
         <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav mx-auto"> @if ($layout->hasMenu('main-menu-header')) @include('partials.navs.nav',
+            <ul class="nav navbar-nav"> @if ($layout->hasMenu('main-menu-header')) @include('partials.navs.nav',
                 ['menu' => $layout->getMenu('main-menu-header'), 'showNavSeparatorBefore' =>
                 isset($showNavSeparatorBefore) ? $showNavSeparatorBefore : false]) @endif </ul>
         </div>
