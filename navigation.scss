@@ -12,7 +12,7 @@
   /*---------- .main-navigation ****Elements ----------*/
 
   .navbar-header {
-    padding: 12px 0;
+    padding: 12px;
 
     @include media-breakpoint-up(md) {
       padding: 0;
@@ -21,7 +21,6 @@
 
   .navbar-collapse {
     background-color: $primary;
-    margin: 0 -12px;
 
     @include media-breakpoint-up(md) {
       background-color: transparent;
@@ -39,7 +38,7 @@
     }
 
     @include media-breakpoint-up(xl) {
-      margin: 0 10px;
+      margin: 0 -10px;
     }
   }
 
@@ -63,31 +62,40 @@
 
   .navbar-nav>li>a,
   .navbar-nav>li.active>a {
-    padding: 12px 12px;
-    font-family: $font-family-sans-serif;
+    padding: 11px 11px 12px;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    color: #000 !important;
+    font-weight: 700;
+    color: #fff !important;
     transition: background-color .3s;
 
     &:hover,
     &:focus {
-      background-color: #fff;
+      background-color: #000;
       text-decoration: none;
-      color: #000 !important;
+      color: #fff !important;
     }
 
     @include media-breakpoint-up(md) {
       padding: 0 !important;
+      font-size: 17px;
       color: #000 !important;
       transform: translate3d(0, 0, 0);
       transition: box-shadow .3s;
 
       &:hover,
       &:focus {
-        box-shadow: 0 2px 0 0 $primary;
+        box-shadow: 0 3px 0 0 $primary;
         background: transparent;
         color: #000 !important;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 5px 0 0 $primary;
       }
     }
   }
@@ -99,7 +107,7 @@
   .navbar-toggler {
     border: 0;
     border-radius: 0;
-    background-color: $primary;
+    background-color: transparent;
 
     &:hover,
     &:focus {
@@ -115,13 +123,47 @@
   .navbar-toggler:hover>.navbar-toggler-icon {
     background-color: transparent;
   }
+
+  &__mobile-logo {
+    @include display-flex(row, flex-start);
+  }
+
+  &__mobile-cta {
+    @include display-flex(row, flex-end);
+  }
+
+  &__mobile-logo,
+  &__mobile-cta {
+    margin: -7.5px !important;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &__mobile-logo>button,
+  &__mobile-logo>div.nav-menu-title {
+    margin: 7.5px !important;
+  }
+
+  &__mobile-cta>a {
+    margin: 7.5px;
+
+    &>img {
+      max-height: 20px;
+
+      @media only screen and (min-width: 375px) {
+        max-height: 30px;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-down(md) {
   .navbar-light .navbar-nav .mobile-dropdown-toggle {
     font-size: 16px;
-    font-weight: 400;
-    color: #000;
+    font-weight: 700;
+    color: #fff;
   }
 
   .navbar-light .navbar-nav .dropdown-menu {
@@ -153,18 +195,19 @@
   .navbar-light .navbar-nav>li.show ul.dropdown-menu>li.show>a,
   .navbar-light .navbar-nav>li.show ul.dropdown-menu>li.show>a:focus,
   .navbar-light .navbar-nav>li.show ul.dropdown-menu>li.show>a:hover {
-    font-family: $font-family-sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    color: #000 !important;
+    font-weight: 700;
+    color: #fff !important;
   }
 
   .navbar-light .navbar-nav>li.show>a:focus,
   .navbar-light .navbar-nav>li.show>a:hover {
-    background-color: #fff;
-    font-family: $font-family-sans-serif;
+    background-color: #000;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    color: #000 !important;
+    font-weight: 700;
+    color: #fff !important;
   }
 }

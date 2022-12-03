@@ -29,11 +29,11 @@
 
       &>img {
         @include media-breakpoint-up(md) {
-          max-width: 250px;
+          max-width: 200px;
         }
 
         @include media-breakpoint-up(lg) {
-          max-width: 300px;
+          max-width: 250px;
         }
       }
     }
@@ -55,7 +55,7 @@
 
   &__cta {
     @include media-breakpoint-up(md) {
-      @include display-flex();
+      @include display-flex(row, center, stretch);
     }
 
     &-separator {
@@ -72,33 +72,31 @@
       display: none;
 
       @include media-breakpoint-up-xxxl {
-        @include display-flex();
-      }
-
-      /* DELETE if buttons don't have radius */
-      &>a:last-child {
-        @include media-breakpoint-up-xxxl {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-        }
+        @include display-flex(row, center, stretch);
       }
     }
   }
 
-  &__contact-phone {
-    @include media-breakpoint-up(md) {
-      @include display-flex();
-      font-size: 18px;
-      color: #4a4a4a;
+  &__shopping-cart {
+    @include display-flex();
+    background-color: $primary;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+
+    @include media-breakpoint-up-xxxl {
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
     }
 
     &>img {
-      height: 20px;
-      margin-right: 10px;
+      height: 30px;
+      margin-right: 5px;
     }
 
-    &>a {
-      color: #4a4a4a;
+    &>span {
+      display: inline-block;
     }
   }
 }
