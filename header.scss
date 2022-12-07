@@ -6,7 +6,7 @@
   }
 
   @include media-breakpoint-up-xxxl {
-    padding: 15px 0 15px 15px;
+    padding: 0;
   }
 
   /*---------- .header ****Elements ----------*/
@@ -19,7 +19,9 @@
     }
 
     @include media-breakpoint-up-xxxl {
-      display: none;
+      background-color: #352d5c;
+      justify-content: flex-end;
+      padding: 0 40px;
     }
   }
 
@@ -29,11 +31,15 @@
 
       &>img {
         @include media-breakpoint-up(md) {
-          max-width: 250px;
+          max-width: 200px;
         }
 
         @include media-breakpoint-up(lg) {
           max-width: 300px;
+        }
+
+        @include media-breakpoint-up(xl) {
+          max-width: 400px;
         }
       }
     }
@@ -43,19 +49,30 @@
 
       @include media-breakpoint-up-xxxl {
         display: block;
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+      }
+    }
+
+    &--hidden-xxxl {
+      @include media-breakpoint-up-xxxl {
+        display: none;
       }
     }
   }
 
   &__main {
     @include media-breakpoint-up-xxxl {
-      @include display-flex(row, space-between);
+      position: relative;
+      @include display-flex(row, flex-end);
+      padding: 35px 40px;
     }
   }
 
   &__cta {
     @include media-breakpoint-up(md) {
-      @include display-flex();
+      @include display-flex(row, center, stretch);
     }
 
     &-separator {
@@ -72,7 +89,7 @@
       display: none;
 
       @include media-breakpoint-up-xxxl {
-        @include display-flex();
+        @include display-flex(row, center, stretch);
       }
     }
   }
@@ -80,8 +97,14 @@
   &__contact-phone {
     @include media-breakpoint-up(md) {
       @include display-flex();
-      font-size: 18px;
-      color: #4a4a4a;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #362e5d;
+    }
+
+    @include media-breakpoint-up-xxxl {
+      color: #fff;
     }
 
     &>img {
@@ -90,13 +113,56 @@
     }
 
     &>a {
-      color: #4a4a4a;
+      margin-left: 5px;
+      color: #362e5d;
+
+      @include media-breakpoint-up-xxxl {
+        color: #fff;
+      }
+    }
+  }
+
+  &__shopping-cart {
+    @include display-flex();
+    background-color: #bd3a46;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+
+    @include media-breakpoint-up-xxxl {
+      position: relative;
+    }
+
+    &::after {
+      @include media-breakpoint-up-xxxl {
+        content: '';
+        width: 100%;
+        height: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: #bd3a46;
+        z-index: 5;
+      }
+    }
+
+    &>img {
+      height: 30px;
+      margin-right: 5px;
+    }
+
+    &>span {
+      display: inline-block;
     }
   }
 }
 
 /* if header is white background include border-bottom on inner pages' header,
-  separator for inner pages' header and .content-wrapper */
+  separator for inner pages' header and .content-wrapper
+  DELETE if header has a background */
 body:not(.home-page) .header {
   border-bottom: 1px solid $primary;
 }
