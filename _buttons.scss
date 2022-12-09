@@ -1,17 +1,30 @@
 .btn {
   border: 0;
+  position: relative;
   border-radius: 0;
   padding: 6px 12px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  text-transform: uppercase;
   white-space: nowrap;
+  text-transform: uppercase;
   color: #fff;
+  z-index: 5;
 
   &:hover,
   &:focus {
     text-decoration: none;
+  }
+
+  &::before {
+    content: '';
+    transform: skewX(-20deg);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
   }
 }
 
@@ -34,65 +47,117 @@
   color: $primary;
 }
 
-.btn-white-border {
-  border: 2px solid #fff;
+.btn-primary {
   background: transparent;
-  padding: 4px 10px;
+
+  &::before {
+    background: $primary;
+  }
+
+  &:hover,
+  &:focus {
+    background: transparent;
+
+    &::before {
+      background: #802820;
+    }
+  }
+}
+
+.btn-white-border {
+  background: transparent;
   color: #fff;
 
-  &--sm {
-    padding: 2px 6px;
+  &::before {
+    border: 2px solid #fff;
+    background: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background: transparent;
+
+    &::before {
+      background: #802820;
+      border-color: #fff;
+    }
   }
 
   &--lg {
-    border-width: 3px;
-    padding: 7px 13px 6px;
+    &::before {
+      border: 3px solid #fff;
+    }
   }
 
   &--xl {
-    border-width: 3px;
-    padding: 12px 17px;
+    &::before {
+      border: 3px solid #fff;
+    }
   }
 }
 
 .btn-dark-border {
-  border: 2px solid #000;
   background: transparent;
-  padding: 4px 10px;
   color: #000;
 
-  &--sm {
-    padding: 2px 6px;
+  &::before {
+    border: 2px solid #000;
+    background: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: #fff;
+
+    &::before {
+      background: #802820;
+      border-color: #000;
+    }
   }
 
   &--lg {
-    border-width: 3px;
-    padding: 7px 13px 6px;
+    &::before {
+      border: 3px solid #000;
+    }
   }
 
   &--xl {
-    border-width: 3px;
-    padding: 12px 17px;
+    &::before {
+      border: 3px solid #000;
+    }
   }
 }
 
 .btn-primary-border {
-  border: 2px solid $primary;
   background: transparent;
-  padding: 4px 10px;
   color: $primary;
 
-  &--sm {
-    padding: 2px 6px;
+  &::before {
+    border: 2px solid $primary;
+    background: transparent;
+  }
+
+  &:hover,
+  &:focus {
+    background: transparent;
+    color: #fff;
+
+    &::before {
+      background: #802820;
+      border-color: $primary;
+    }
   }
 
   &--lg {
-    border-width: 3px;
-    padding: 7px 13px 6px;
+    &::before {
+      border: 3px solid $primary;
+    }
   }
 
   &--xl {
-    border-width: 3px;
-    padding: 12px 17px;
+    &::before {
+      border: 3px solid $primary;
+    }
   }
 }
