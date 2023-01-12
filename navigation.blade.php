@@ -8,7 +8,9 @@
         </div>
 
         <button type="button" class="navbar-toggle navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon">
+                <i class="bi bi-list"></i>
+            </span>
         </button>
     </div>
 
