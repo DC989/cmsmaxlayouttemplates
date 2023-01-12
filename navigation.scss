@@ -118,20 +118,28 @@
     border: 0;
     border-radius: 0;
     background-color: transparent;
+    padding: 5px 7px;
 
     &:hover,
     &:focus {
-      background-color: #3a3d72;
+      background-color: #dce5e7;
     }
   }
 
-  .navbar-toggler>.navbar-toggler-icon {
-    background-color: transparent;
+  .navbar-toggler > .navbar-toggler-icon {
+    width: auto;
+    height: auto;
+    background-image: none;
   }
 
-  .navbar-toggler:focus>.navbar-toggler-icon,
-  .navbar-toggler:hover>.navbar-toggler-icon {
-    background-color: transparent;
+  .navbar-toggler > .navbar-toggler-icon > i {
+    font-size: 30px;
+    color: #000;
+  }
+
+  .navbar-toggler:focus > .navbar-toggler-icon > i,
+  .navbar-toggler:hover > .navbar-toggler-icon > i {
+    color: #000;
   }
 
   &__mobile-logo {
